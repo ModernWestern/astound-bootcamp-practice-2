@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="src/index.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -31,7 +32,8 @@
 						<li class="header__user-nav-item">
                             <div class="header__user-nav-link">
                                 <i class="fas fa-heart"></i>
-                                <div class="header__user-nav-item-badge">2</div>
+                                <label id="wish-list-count" class="header__user-nav-item-badge">0
+                                </label>
                             </div>
                         </li>
                         <li class="header__user-nav-item">
@@ -413,7 +415,7 @@
 	<footer>
 		<p>&copy; 2021 Astound Commerce. All Rights Reserved.</p>
 	</footer>
-	<div class="dialog">
+	<div  id="hidden" class="dialog">
 		<div class="dialog-window" id="popup-1">
 			<div class="close-button">
 				<a class="user-link" href="#">
@@ -422,7 +424,7 @@
 			</div>
 			<div class="dialog-text">
 				<p>Product added to wish list</p>
-                <button type="button" class="primary-btn dialog__cancel-btn">Cancel</button>
+                <button id="close" type="button" class="primary-btn dialog__cancel-btn">Cancel</button>
 			</div>
 		</div>
 	</div>
