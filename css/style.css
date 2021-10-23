@@ -264,8 +264,8 @@ button {
 	-ms-flex-align: center;
 	align-items: center;
 	position: absolute;
-	top: 0;
-	right: 10px;
+	top: -5px;
+	right:-3px;
 	height: 17px;
 	width: 17px;
 	-webkit-border-radius: 50%;
@@ -317,6 +317,10 @@ button {
 .user-link:hover {
 	background-color: #000;
 	color: #fff;
+}
+
+div.header__user-nav-link{
+	position:relative
 }
 
 .header__nav {
@@ -862,6 +866,75 @@ button {
 	border-color: transparent;
 }
 
+.product-item__wish-list-btn {
+	margin-top:0.5rem;
+	padding: 15px;
+	width: 95%;
+	background-color: #fff;
+	color: #f05929;
+	border: 2px solid #f05929;
+	text-transform: uppercase;
+	font-size: 14px;
+    animation: fill 5s infinite ease-in-out;
+}
+
+.product-item__wish-list-btn:hover {
+	color: #fff;
+	border-color: #f05929;
+	background-color: #f05929
+}
+
+@keyframes breathing{
+	20%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+  25% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  60% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes fill{
+	20%, 100% {
+		border-color: #f05929;
+		background: #fff;
+		color:#f05929;
+	}
+	0% {
+		border-color: #f05929;
+		background: #f05929;
+		color:white;
+	}
+	10% {
+		border-color: #214bff;
+		background: #214bff;
+		color:white;
+	}
+	15% {
+		
+		border-color: #214bff;
+		background: #214bff;
+		color:white;
+	}
+	20% {
+		border-color: #f05929;
+		background: #f05929;
+		color:white;
+	}
+}
+
 .product-item__badge {
 	position: absolute;
 	top: 10px;
@@ -1031,6 +1104,7 @@ footer p {
 	align-items: center;
 	transition: visibility cubic-bezier(.3, .46, .45, .94) .2s;
 	will-change: opacity;
+	display:none;
 }
 
 .dialog::after {
@@ -1066,7 +1140,29 @@ footer p {
 	padding: 30px;
 }
 
+.dialog-text p {
+	padding: 3rem 0
+}
+
 .close-button {
-	float: right;
-	margin: 5px;
+	position:absolute;
+	right:3px;
+	top:3px
+}
+
+.dialog__cancel-btn {
+	margin-top:0.5rem;
+	padding: 15px;
+	width: 95%;
+	background-color: #fff;
+	color: #f02929;
+	border: 2px solid #f02929;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.dialog__cancel-btn:hover {
+	color: #fff;
+	border-color: #f02929;
+	background-color: #f02929
 }
